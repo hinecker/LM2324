@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    function sumaNumerosPares(arr) {
+        let suma = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] % 2 === 0) {
+            suma += arr[i];
+          }
+        }
+        return suma;
+      }
+      
+      // Ejemplo de uso:
+      const miArreglo = [2, 13, 40, 9];
+      const resultado = sumaNumerosPares(miArreglo);
+      console.log(`La suma de los números pares en el arreglo es: ${resultado}`);
+</body>
+</html>
