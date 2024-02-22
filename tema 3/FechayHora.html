@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="texto"></p>
+    <script>
+        function cargar(){
+            let cadena=localStorage.getItem("ultimaFechaHora");
+            var hoy =new Date();
+            var ahora = hoy.tolocaleString();
+            if (cadena!=null)
+            {
+                document.getElementById("texto").innerHTML="Se conectó la última vez el día"+ahora;
+            }
+            else{
+                document.getElementById("texto")innerHTML="Hasta ahora mismo, nunca se había conectado"
+            }
+            localStorage.setItem("ultimaFechaHora",ahora);
+        }
+        window.onload = cargaPagina();
+    </script>
+</body>
+</html>
